@@ -1,38 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    object-fit: contain;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.authentication_items {
+    display: flex;
+    /* flex-direction: row; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.authentication_items span {
+    margin: 0.5rem;
+    cursor: pointer;
+    text-emphasis: bold;
+    text-decoration: solid;
+    font-size: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.authentication_items span:hover {
+    text-shadow: 0px 0px #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__header img {
+    object-fit: contain;
+}
+
+.postWithoutLogin {
+    padding: 2%;
+}
+
+.signupModal,
+.signinModal {
+    z-index: 2;
+    padding: 2%;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 5%;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.signupModal input,
+.signinModal input {
+    margin: 0.5% 0;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.5%;
+}
+
+.signupModal button,
+.signinModal button {
+    width: 20%;
+    margin-top: 1rem;
+    background-color: transparent;
+    padding: 0.5%;
+    font-size: 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+
+.signupModal button:hover,
+.signinModal button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.signupModal head,
+.signinModal head {
+    text-align: center;
+    z-index: 2;
+}
+
+.signupModal form,
+.signinModal form {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute;
+    top: 10%;
+    left: 50%; */
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }

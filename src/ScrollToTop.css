@@ -1,0 +1,47 @@
+.container {
+    position: fixed;
+    bottom: 10px;
+    /* right: 400px; */
+    right: 30%;
+    align-self: center;
+    /* margin: auto; */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: black;
+    color: white;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.container i {
+    margin-top: 5px;
+    animation: jumpUp 0.3s alternate ease infinite;
+}
+
+@keyframes jumpUp {
+    from {
+        transform: translateY(2px);
+    }
+    to {
+        transform: translateY(-1px);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        right: 20%;
+        /* background-color: rgba(255, 255, 255, 0.5);
+        color: black; */
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        right: 50%;
+        /* transform: translateX(-50%); */
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+}

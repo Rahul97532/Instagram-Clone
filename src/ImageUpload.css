@@ -1,0 +1,32 @@
+.ImageUpload {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    /* border: 2px solid black; */
+}
+
+.image_upload_progress {
+    width: 100%;
+    height: 30px;
+    /* background: transparent; */
+    /* background-color: pink; */
+}
+
+.ImageUpload input {
+    padding: 0.2rem;
+    border: none;
+    border-bottom: 0.1rem solid lightgray;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.ImageUpload button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
